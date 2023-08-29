@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <!--cylinder length="0.6" radius="0.2"/-->
+        <mesh filename="package://testbot_description/meshes/quadrotor/quadrotor_base.dae"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="camera_link" />
+  <joint name="depth_camera_joint" type="fixed">
+      <origin xyz="0.1 0 0" rpy="-1.5 0 1.5" />
+      <parent link="base_link" />
+      <child link="camera_link" />
+    </joint>
+</robot>
+
+
